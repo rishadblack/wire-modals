@@ -1,0 +1,70 @@
+{
+    "name": "rishadblack/wire-modals",
+    "description": "On-demand Livewire components with Bootstrap 5 modals: mount a component when a button is clicked, call an action on it, and unmount it when its modal closes.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "S M Rishad",
+            "email": "rishad.black@gmail.com",
+            "homepage": "https://smrishad.com"
+        }
+    ],
+    "homepage": "https://github.com/rishadblack/wire-modals",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "modal",
+        "bootstrap",
+        "dynamic-component",
+        "alpine"
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/view": "^11.0|^12.0|^13.0",
+        "livewire/livewire": "^3.0|^4.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.20",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.8|^4.0|^5.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rishadblack\\WireModals\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rishadblack\\WireModals\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest --compact",
+        "lint": "vendor/bin/pint",
+        "lint:check": "vendor/bin/pint --test",
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=1G",
+        "check": [
+            "@lint:check",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rishadblack\\WireModals\\WireModalsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

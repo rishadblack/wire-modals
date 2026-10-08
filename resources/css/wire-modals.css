@@ -1,0 +1,19 @@
+/* Optional helpers for wire-modals. Import once; the modal component ships no styles. */
+
+.wire-modals-body-tall {
+    min-height: 50vh;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+@media (max-width: 576px) {
+    .wire-modals-body-tall {
+        min-height: 40vh;
+        max-height: 70vh;
+    }
+}
+
+[data-wire-modals-loading="true"] {
+    cursor: progress;
+    opacity: 0.7;
+}
