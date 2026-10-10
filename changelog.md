@@ -2,6 +2,13 @@
 
 All notable changes to `rishadblack/wire-modals` are documented in this file.
 
+## 1.0.1 - 2026-10-10
+
+### Added
+
+- `docs/sylloo-migration-prompt.md`: step-by-step guide for migrating an application with a hand-rolled dynamic
+  component / modal loader to wire-modals (legacy mode first, then modernisation).
+
 ## 1.0.0 - 2026-10-08
 
 ### Added
