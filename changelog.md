@@ -2,6 +2,13 @@
 
 All notable changes to `rishadblack/wire-modals` are documented in this file.
 
+## 1.1.0 - 2026-11-17
+
+### Added
+
+- `<x-wire-modals::modal>` props `header-class` and `body-class`: extra classes for `.modal-header` and `.modal-body`,
+  so a page can size or style one modal without CSS keyed on its id.
+
 ## 1.0.1 - 2026-10-10
 
 ### Added

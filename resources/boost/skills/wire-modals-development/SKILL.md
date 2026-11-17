@@ -175,7 +175,7 @@ The view declares every modal the component drives. Each `id` must equal the nam
 </div>
 ```
 
-Modal props: `id` (required), `title`, `size` (`sm|lg|xl`), `centered`, `scrollable`, `fullscreen` (`true` or a breakpoint), `backdrop` (`true|false|'static'`), `keyboard`, `close-button`. Slots: default body, `button` (header actions), `footer`. Extra attributes merge onto the modal root. The component emits no CSS; use `.wire-modals-body-tall` from the package stylesheet on the body when a tall modal is wanted.
+Modal props: `id` (required), `title`, `size` (`sm|lg|xl`), `centered`, `scrollable`, `fullscreen` (`true` or a breakpoint), `backdrop` (`true|false|'static'`), `keyboard`, `close-button`, `header-class` and `body-class` (extra classes on `.modal-header` / `.modal-body`, e.g. `body-class="wire-modals-body-tall p-0"`). Slots: default body, `button` (header actions), `footer`. Extra attributes merge onto the modal root. The component emits no CSS; use `.wire-modals-body-tall` from the package stylesheet on the body when a tall modal is wanted.
 
 ## Triggers
 

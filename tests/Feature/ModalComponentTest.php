@@ -67,3 +67,17 @@ it('uses config defaults for size, centered and scrollable', function () {
 
     expect($html)->toContain('class="modal-dialog modal-lg modal-dialog-centered"');
 });
+
+it('adds the given classes to the header and the body', function () {
+    $html = Blade::render('<x-wire-modals::modal id="M" title="T" header-class="border-0 pb-0" body-class="p-0 bg-light">x</x-wire-modals::modal>');
+
+    expect($html)->toContain('<div class="modal-header border-0 pb-0">')
+        ->toContain('<div class="modal-body p-0 bg-light">');
+});
+
+it('keeps the plain header and body classes without them', function () {
+    $html = Blade::render('<x-wire-modals::modal id="M" title="T">x</x-wire-modals::modal>');
+
+    expect($html)->toContain('<div class="modal-header">')
+        ->toContain('<div class="modal-body">');
+});

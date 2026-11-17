@@ -30,6 +30,8 @@ class Modal extends Component
         ?bool $scrollable = null,
         public string|bool $fullscreen = false,
         public bool $closeButton = true,
+        public ?string $headerClass = null,
+        public ?string $bodyClass = null,
     ) {
         $this->backdrop = $backdrop ?? config('wire-modals.modal.backdrop', 'static');
         $this->keyboard = $keyboard ?? (bool) config('wire-modals.modal.keyboard', false);
@@ -70,6 +72,18 @@ class Modal extends Component
         }
 
         return implode(' ', $classes);
+    }
+
+    /** `modal-header` plus the classes given in `header-class`. */
+    public function headerClasses(): string
+    {
+        return trim('modal-header '.($this->headerClass ?? ''));
+    }
+
+    /** `modal-body` plus the classes given in `body-class`. */
+    public function bodyClasses(): string
+    {
+        return trim('modal-body '.($this->bodyClass ?? ''));
     }
 
     public function legacyEvents(): bool

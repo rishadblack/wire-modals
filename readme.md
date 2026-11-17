@@ -404,7 +404,7 @@ return [
 ];
 ```
 
-`<x-wire-modals::modal>` props: `id` (required), `title`, `size`, `centered`, `scrollable`, `fullscreen` (`true` or a breakpoint such as `md`), `backdrop`, `keyboard`, `close-button`. Slots: default (body), `button` (header actions), `footer`.
+`<x-wire-modals::modal>` props: `id` (required), `title`, `size`, `centered`, `scrollable`, `fullscreen` (`true` or a breakpoint such as `md`), `backdrop`, `keyboard`, `close-button`, `header-class` and `body-class` (extra classes for `.modal-header` and `.modal-body`). Slots: default (body), `button` (header actions), `footer`.
 
 ## Browser events
 

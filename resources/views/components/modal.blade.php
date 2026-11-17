@@ -18,7 +18,7 @@
     <div class="{{ $dialogClasses() }}">
         <div class="modal-content">
             @if ($title || isset($button) || $closeButton)
-                <div class="modal-header">
+                <div class="{{ $headerClasses() }}">
                     @if ($title)
                         <h5 class="modal-title" id="{{ $id }}-title">{{ $title }}</h5>
                     @endif
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             @endif
-            <div class="modal-body">
+            <div class="{{ $bodyClasses() }}">
                 {{ $slot }}
             </div>
             @isset($footer)
